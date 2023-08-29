@@ -1,0 +1,24 @@
+.jobCard {
+    padding: 10px;
+    background-color: #fff;
+    width: 300px;
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 2px #858181b6;
+    cursor: pointer;
+}
+
+
+.jobCard header {
+    display: flex;
+    flex-direction: column;
+}
+
+.jobCard span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.jobCard hr, p {
+    margin-top: 10px;
+}

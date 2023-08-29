@@ -6,6 +6,10 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+body {
+    background-color: #d3d3d377;
+}
+
 .container {
     display: flex;
     flex-direction: column;
