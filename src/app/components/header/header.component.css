@@ -1,29 +1,29 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 100vw;
-    height: 120px;
-    position: fixed;
-    top: 0;
+  width: 100vw;
+  height: 120px;
+  position: fixed;
+  top: 0;
 
-    background-color: green;
-    z-index: 999;
+  background-color: green;
+  z-index: 999;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo h1 {
-    color: #051405;
-    font-weight: 700;
-    font-size: 42px;
+  color: #051405;
+  font-weight: 700;
+  font-size: 42px;
 }
 
 .logo span {
-    color: #ffff;
+  color: #ffff;
 }
