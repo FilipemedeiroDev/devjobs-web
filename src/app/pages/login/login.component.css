@@ -1,41 +1,60 @@
 .container form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    margin-top: 50px;
+  max-width: 500px;
+  width: 100%;
 }
 
 .spanLink {
-    margin-top: 12px;
-    text-align: center;
-    font-size: 14px;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
 }
 
 .contentInput {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
 
-    width: 300px;
+  width: 100%;
 }
 
 .contentInput label {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .contentInput input {
-    padding: 8px;
-    border: 1px solid gray;
-    border-radius: 10px;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid gray;
+  border-radius: 10px;
 }
 
 .buttonLogin {
-    width: 300px;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    color: #ffff;
-    background-color: green;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  color: #ffff;
+  background-color: green;
 
-    cursor: pointer;
+  width: 100%;
+
+  cursor: pointer;
+}
+
+@media (max-width: 540px) {
+  .container form h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .contentInput {
+    width: 90%;
+  }
+
+  .buttonLogin {
+    width: 90%;
+  }
 }

@@ -3,10 +3,13 @@
   align-items: center;
   justify-content: center;
 
-  width: 100vw;
+  width: 100%;
   height: 120px;
   position: fixed;
   top: 0;
+
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
 
   background-color: green;
   z-index: 999;
@@ -16,6 +19,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .logo h1 {
