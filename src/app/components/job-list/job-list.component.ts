@@ -9,7 +9,10 @@ import { JobService } from 'src/app/services/job.service';
 })
 export class JobListComponent implements OnInit{
 
-  listJobs?: Job[];
+listJobs?: Job[];
+
+filter: string = '';
+
 
 constructor (
   public jobService: JobService
@@ -26,4 +29,16 @@ getJobs() {
   });
 }
 
+filteredJobs() {
+
+  if (this.listJobs?.length === 0 || this.filter === undefined
+  || this.filter.trim() === '') {
+    return this.listJobs;
+  }
+
+  return this.listJobs?.filter(job => {
+    return job.headline.toLocaleLowerCase().includes(this.filter.toLocaleLowerCase()) 
+    || job.description.toLocaleLowerCase().includes(this.filter.toLocaleLowerCase()) 
+  });
+}
 }

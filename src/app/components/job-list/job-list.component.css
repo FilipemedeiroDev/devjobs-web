@@ -1,13 +1,37 @@
+.searchBar {
+    max-width: 500px;
+    width: 100%;
+    position: fixed;
+  
+    top: 90px;
+  
+    z-index: 999;
+  }
+  
+  .searchBar input {
+    width: 100%;
+    height: 50px;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 2px #858181b6;
+  }
+  
+  .searchBar svg {
+    position: absolute;
+    top: 18px;
+    right: 8px;
+  }
+
 .jobCard {
     padding: 10px;
     background-color: #fff;
     width: 300px;
 
     border-radius: 10px;
-    box-shadow: 2px 2px 8px 2px #858181b6;
+    box-shadow: 2px 2px 8px 2px #8f8b8b;
     cursor: pointer;
 }
-
 
 .jobCard header {
     display: flex;
@@ -19,6 +43,17 @@
     font-size: 18px;
 }
 
-.jobCard hr, p {
-    margin-top: 10px;
+.jobCard small {
+    color: #858181b6
 }
+
+.jobCard  p {
+    margin-top: 20px;
+}
+
+
+@media (max-width: 650px) {
+    .searchBar {
+      width: 70%;
+    }
+  }
