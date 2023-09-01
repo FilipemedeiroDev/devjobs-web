@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { JobListComponent } from './components/job-list/job-list.component';
+import { JobDetailComponent } from './pages/job-detail/job-detail.component';
 
 
 
@@ -22,6 +23,7 @@ import { JobListComponent } from './components/job-list/job-list.component';
     HomeComponent,
     HeaderComponent,
     JobListComponent,
+    JobDetailComponent,
   ],
   imports: [
     BrowserModule,

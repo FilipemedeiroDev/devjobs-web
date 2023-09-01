@@ -16,10 +16,12 @@ filter: string = '';
 
 constructor (
   public jobService: JobService
-) {}
+) {
+  this.getJobs();
+}
 
 ngOnInit(): void {
-  this.getJobs();
+  
 }
 
 
