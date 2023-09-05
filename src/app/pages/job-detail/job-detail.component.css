@@ -1,0 +1,115 @@
+.containerJobDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+
+    width: 100%;
+
+    margin-top: 180px;
+
+}
+
+.contentJobDetail {
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+
+    padding: 20px 12px;
+    margin-top: 40px;
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 2px #8f8b8b;
+    cursor: pointer;
+
+    position: relative;
+}
+
+.back-button {
+    background-color: transparent;
+    color: #000;
+    font-weight: 600;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+  
+    cursor: pointer;
+
+    position: absolute;
+    top: -46px;
+    left:0px;
+}
+
+.header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.contentCompany {
+    display: flex;
+
+    gap: 10px;
+}
+
+.infoCompany {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoCompany h3 {
+    font-weight: 400;
+}
+
+.infoCompany small {
+    color: #6d6a6ab6
+}
+
+.logoCompany {
+   width: 40px;
+}
+
+button {
+  background-color: rgba(0, 128, 0, 0.788);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+
+  cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+hr {
+    margin-top: 40px;
+}
+
+.headline {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.contentJobDetail span {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 6px;
+    font-weight: 700;
+    border-radius: 4px;
+
+}
+
+.containerJobDetail small {
+    color: #5c5959
+}
+
+
+@media (max-width: 640px) {
+    .contentJobDetail {
+        width: 90%;
+    }
+}
