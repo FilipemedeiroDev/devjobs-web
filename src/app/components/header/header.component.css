@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   cursor: pointer;
 }
@@ -34,3 +34,23 @@
 .logo span {
   color: #ffff;
 }
+
+.login-link-button {
+  display: flex;
+  align-items: center;
+  
+  color: #ffff;
+
+  gap: 4px;
+
+  position: absolute;
+  top: 6px;
+  right: 22px;
+
+  cursor: pointer;
+}
+
+.login-link-button img {
+  width: 20px;
+}
+

@@ -2,4 +2,14 @@
     <div routerLink="/" class="logo">
         <h1>Dev<span>jobs</span></h1>
     </div>
+
+    <div *ngIf="showSignIn" class="login-link-button" routerLink="dashboard" >
+        <span class="link-dashboard">Entrar</span>
+        <img src="../../../assets/icons/icon-login.png" alt="icon login"/>
+    </div>
+    
+    <div *ngIf="showLogout" class="login-link-button" routerLink="login" >
+        <span class="link-dashboard">Sair</span>
+        <img src="../../../assets/icons/icon-login.png" alt="icon login"/>
+    </div>
 </header>

@@ -11,9 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { JobListComponent } from './components/job-list/job-list.component';
 import { JobDetailComponent } from './pages/job-detail/job-detail.component';
-
-
-
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +22,7 @@ import { JobDetailComponent } from './pages/job-detail/job-detail.component';
     HeaderComponent,
     JobListComponent,
     JobDetailComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
