@@ -1,6 +1,6 @@
 
 <div  class="containerJobDetail">
-    
+
     <div *ngIf="job" class="contentJobDetail">
         <button routerLink="/" class="back-button">Voltar</button>
         <div *ngIf="company" class="header">
@@ -15,11 +15,12 @@
         </div>
         <hr>
         <h1 class="headline" >{{ job.headline }}</h1>
-        <small>{{ job.routine }}</small>
         <span>Descrição:</span>
         <p class="description">{{ job.description }}</p>
         <span>Requisitos:</span>
         <p>{{ job.requirements }}</p>
+        <span>Rotina:</span>
+        <p>{{ job.routine }}</p>
     </div>
 </div>
 

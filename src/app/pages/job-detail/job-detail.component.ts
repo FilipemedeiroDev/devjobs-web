@@ -21,15 +21,17 @@ export class JobDetailComponent {
 
   constructor (private jobService: JobService, private companyService: CompanyService, private route: ActivatedRoute) {
     this.getJobDetail();
-    this.getCompanyDetail();
   }
 
   getJobDetail() {
     const id = Number(this.route.snapshot.paramMap.get("id"));
-    this.jobService.getJobById(id).subscribe((job) => (this.job) = job);
+    this.jobService.getJobById(id).subscribe((job) => {
+      this.job = job;
+      this.getCompanyDetail(job.company_id);
+    });
   }
 
-  getCompanyDetail() {
-    this.companyService.getCompanyById(Number(!this.job?.company_id)).subscribe((company) => (this.company) = company);
+  getCompanyDetail(companyId: number) {
+    this.companyService.getCompanyById(companyId).subscribe((company) => (this.company) = company);
   }
 }

@@ -21,7 +21,7 @@ constructor (
 }
 
 ngOnInit(): void {
-  
+
 }
 
 
@@ -38,9 +38,15 @@ filteredJobs() {
     return this.listJobs;
   }
 
-  return this.listJobs?.filter(job => {
-    return job.headline.toLocaleLowerCase().includes(this.filter.toLocaleLowerCase()) 
-    || job.description.toLocaleLowerCase().includes(this.filter.toLocaleLowerCase()) 
+  const splitted = this.filter.split(' ');
+
+    return this.listJobs?.filter(job => {
+
+
+    return splitted.every(predicate => {
+      return job.headline.toLocaleLowerCase().includes(predicate.toLocaleLowerCase())
+      || job.description.toLocaleLowerCase().includes(predicate.toLocaleLowerCase())
+    })
   });
 }
 }
