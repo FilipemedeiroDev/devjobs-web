@@ -14,14 +14,18 @@ export class HeaderComponent implements OnInit{
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
-      
+
       if (event instanceof NavigationEnd) {
        const currentUrl = this.router.url;
-       this.showSignIn = currentUrl !== '/dashboard';
+       this.showSignIn = currentUrl !== '/dashboard' && currentUrl !== '/login' && currentUrl !== '/register';
        this.showLogout = currentUrl === '/dashboard';
       }
     });
   }
- 
-  
+
+  logout() {
+    localStorage.clear();
+    this.router.navigate(["/"])
+  }
+
 }

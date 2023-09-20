@@ -43,6 +43,10 @@
   cursor: pointer;
 }
 
+.buttonRegister:hover {
+  opacity: 0.8;
+}
+
 @media (max-width: 540px) {
   .container form h1 {
     font-size: 28px;
