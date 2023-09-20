@@ -15,7 +15,6 @@ export class JobService {
   private apiUrl = `${this.baseApiUrl}jobs`;
 
 
-
   constructor(
     private httpClient: HttpClient
   ) { }
