@@ -1,16 +1,22 @@
 <div class="container">
-    <form>
+    <form (ngSubmit)="submit()" [formGroup]="loginForm" #formDir="ngForm">
         <h1>Bem-vindo(a)</h1>
         <div class="contentInput">
-            <label>Email</label>
-            <input type="email"/>
+            <label for="email" >Email</label>
+            <input type="email" placeholder="Digite seu email" formControlName="email" required/>
+            <div *ngIf="email.invalid && formDir.submitted" class="validation-error">
+              <p *ngIf="email.errors?.['required']">O email  é obrigatório</p>
+            </div>
         </div>
         <div class="contentInput">
-            <label>Senha</label>
-            <input type="password"/>
+            <label for="password" >Senha</label>
+            <input type="password" placeholder="****" formControlName="password" required/>
+            <div *ngIf="password.invalid && formDir.submitted" class="validation-error">
+              <p *ngIf="password.errors?.['required']">A senha é obrigatória</p>
+            </div>
         </div>
 
-        <button class="buttonLogin">Entrar</button>
+        <button routerLinkActive="router-link-active" class="buttonLogin">Entrar</button>
 
         <span class="spanLink">Ainda não possui uma conta? faça o <a routerLink="/register">cadastro</a>
         </span>

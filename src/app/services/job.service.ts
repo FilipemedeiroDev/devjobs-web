@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 import { ResponseJobs } from '../models/responseJobs.model';
 import { Job } from '../models/Job.model';
@@ -10,7 +11,9 @@ import { Job } from '../models/Job.model';
 })
 export class JobService {
 
-  apiUrl = 'http://localhost:8000/jobs';
+  private baseApiUrl  = environment.baseApiUrl;
+  private apiUrl = `${this.baseApiUrl}jobs`;
+
 
 
   constructor(

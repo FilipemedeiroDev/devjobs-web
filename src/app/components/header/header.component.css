@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 150px;
   margin-bottom: 20px;
 
   cursor: pointer;
@@ -38,7 +38,7 @@
 .login-link-button {
   display: flex;
   align-items: center;
-  
+
   color: #ffff;
 
   gap: 4px;
@@ -53,4 +53,3 @@
 .login-link-button img {
   width: 20px;
 }
-

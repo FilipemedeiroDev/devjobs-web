@@ -42,7 +42,6 @@ filteredJobs() {
 
     return this.listJobs?.filter(job => {
 
-
     return splitted.every(predicate => {
       return job.headline.toLocaleLowerCase().includes(predicate.toLocaleLowerCase())
       || job.description.toLocaleLowerCase().includes(predicate.toLocaleLowerCase())
