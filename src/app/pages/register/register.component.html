@@ -1,21 +1,53 @@
 <div class="container">
-  <form>
+  <form (ngSubmit)="submit()" [formGroup]="registerForm" #formDir="ngForm">
     <h1>Faça o seu cadastro</h1>
     <div class="content-input">
-      <label>Nome</label>
-      <input type="text" />
+      <label for="first_name">Primeiro Nome</label>
+      <input
+        type="text"
+        placeholder="Digite seu nome"
+        formControlName="first_name"
+        required
+      />
+      <div *ngIf="first_name.invalid && formDir.submitted" class="validation-error">
+        <p *ngIf="first_name.errors?.['required']">O nome é obrigatório</p>
+      </div>
     </div>
     <div class="content-input">
-      <label>Username</label>
-      <input type="text" />
+      <label for="last_name">Útimo Nome</label>
+      <input
+        type="text"
+        placeholder="Digite seu sobrenome"
+        formControlName="last_name"
+        required
+      />
+      <div *ngIf="last_name.invalid && formDir.submitted" class="validation-error">
+        <p *ngIf="last_name.errors?.['required']">O sobrenome é obrigatório</p>
+      </div>
     </div>
     <div class="content-input">
-      <label>Email</label>
-      <input type="email" />
+      <label for="email" >Email</label>
+      <input
+        type="email"
+        placeholder="Digite seu melhor email"
+        formControlName="email"
+        required
+      />
+      <div *ngIf="email.invalid && formDir.submitted" class="validation-error">
+        <p *ngIf="email.errors?.['required']">O email é obrigatório</p>
+      </div>
     </div>
     <div class="content-input">
-      <label>Senha</label>
-      <input type="password" />
+      <label for="password" >Senha</label>
+      <input
+        type="password"
+        placeholder="****"
+        formControlName="password"
+        required
+      />
+      <div *ngIf="password.invalid && formDir.submitted" class="validation-error">
+        <p *ngIf="password.errors?.['required']">A senha é obrigatória</p>
+      </div>
     </div>
 
     <button class="button-register">Cadastrar</button>
