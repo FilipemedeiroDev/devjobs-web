@@ -1,14 +1,11 @@
-.homeContainer {
+.home-container {
   display: flex;
   flex-direction: column;
   width: 100vw;
   align-items: center;
 
-  
-  
   margin-top: calc(120px + 40px);
 }
-
 
 .divider {
   width: 100%;
@@ -16,9 +13,7 @@
   background-color: #e9e7e7;
   margin-bottom: 20px;
   position: fixed;
-  top:  0;
+  top: 0;
 
   z-index: 99;
 }
-
-

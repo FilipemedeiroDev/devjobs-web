@@ -1,12 +1,12 @@
 
-<div  class="containerJobDetail">
+<div  class="container-job-detail">
 
-    <div *ngIf="job" class="contentJobDetail">
+    <div *ngIf="job" class="content-job-detail">
         <button routerLink="/" class="back-button">Voltar</button>
         <div *ngIf="company" class="header">
-            <div  class="contentCompany">
-                <img  class="logoCompany" src="{{company.photo_url === '' ? 'assets/icons/icon-company.png' : company.photo_url}}" alt="">
-                <div class="infoCompany">
+            <div  class="content-company">
+                <img  class="logo-company" src="{{company.photo_url === '' ? 'assets/icons/icon-company.png' : company.photo_url}}" alt="">
+                <div class="info-company">
                     <h3>{{ company.short_name }}</h3>
                     <small>{{ company.state }}</small>
                 </div>

@@ -7,13 +7,13 @@
   width: 100%;
 }
 
-.spanLink {
+.span-link {
   margin-top: 12px;
   text-align: center;
   font-size: 14px;
 }
 
-.contentInput {
+.content-input {
   display: flex;
   flex-direction: column;
   margin-bottom: 12px;
@@ -21,18 +21,18 @@
   width: 500px;
 }
 
-.contentInput label {
+.content-input label {
   font-weight: 600;
 }
 
-.contentInput input {
+.content-input input {
   height: 40px;
   padding: 8px;
   border: 1px solid gray;
   border-radius: 10px;
 }
 
-.buttonRegister {
+.button-register {
   width: 500px;
   padding: 12px;
   border: none;
@@ -43,7 +43,7 @@
   cursor: pointer;
 }
 
-.buttonRegister:hover {
+.button-register:hover {
   opacity: 0.8;
 }
 
@@ -53,11 +53,11 @@
     margin-bottom: 8px;
   }
 
-  .contentInput {
+  .content-input {
     width: 90%;
   }
 
-  .buttonRegister {
+  .button-register {
     width: 90%;
   }
 }
