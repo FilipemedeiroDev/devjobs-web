@@ -40,7 +40,7 @@ filteredJobs() {
 
   const splitted = this.filter.split(' ');
 
-    return this.listJobs?.filter(job => {
+  return this.listJobs?.filter(job => {
 
     return splitted.every(predicate => {
       return job.headline.toLocaleLowerCase().includes(predicate.toLocaleLowerCase())

@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastService } from 'angular-toastify';
 import { ResponseLogin } from 'src/app/models/responseLogin.model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit{
   loginForm!: FormGroup;
   response?: ResponseLogin;
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(private userService: UserService, private router: Router, private _toastService: ToastService) {}
 
 
   ngOnInit(): void {
@@ -40,8 +41,10 @@ export class LoginComponent implements OnInit{
     await this.userService.login(this.loginForm.value).subscribe((data) => {
       this.response = data
       localStorage.setItem("token", this.response.access_token);
-      this.router.navigate(['dashboard'])
+      this._toastService.success('Login realizado com sucesso!');
+      this.router.navigate(['dashboard']);
     });
+
 
   }
 }

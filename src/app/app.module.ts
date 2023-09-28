@@ -13,6 +13,7 @@ import { JobListComponent } from './components/job-list/job-list.component';
 import { JobDetailComponent } from './pages/job-detail/job-detail.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthInterceptor } from './shared/interceptors/auth-interceptor';
+import { AngularToastifyModule, ToastService } from 'angular-toastify';
 
 @NgModule({
   declarations: [
@@ -30,14 +31,16 @@ import { AuthInterceptor } from './shared/interceptors/auth-interceptor';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularToastifyModule
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
-    }
+    },
+    ToastService
   ],
   bootstrap: [AppComponent]
 })
