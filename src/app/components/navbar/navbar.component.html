@@ -1,0 +1,25 @@
+<aside class="{{ showNavBarMobile ?  'navbar-mobile' : 'navbar' }}">
+  <nav>
+    <button routerLink="/">
+      <span>
+        <img src="../../../assets/icons/icon-home.png" alt="icone casa" />
+        <span>Página Inícial</span>
+      </span>
+    </button>
+
+    <button >
+      <span>
+        <img  src="../../../assets/icons/icon-job.png" alt="icone de maleta" />
+        <span>Minhas vagas</span>
+      </span>
+    </button>
+  </nav>
+
+
+</aside>
+<img
+  (click)="showNavMobile()"
+  class="menu"
+  src="{{ showNavBarMobile ? '../../../../../assets/icons/icon-close.png' : '../../../../../assets/icons/icon-menu.png'}}"
+  alt="icones menu mobile"
+/>

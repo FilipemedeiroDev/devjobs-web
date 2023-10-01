@@ -53,3 +53,13 @@
 .login-link-button img {
   width: 20px;
 }
+
+@media (width < 480px) {
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .logo h1 {
+    font-size: 38px;
+  }
+}
