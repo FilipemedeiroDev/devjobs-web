@@ -3,14 +3,21 @@
     <button routerLink="/">
       <span>
         <img src="../../../assets/icons/icon-home.png" alt="icone casa" />
-        <span>Página Inícial</span>
+        <span>Painel de vagas</span>
       </span>
     </button>
 
-    <button >
+    <button routerLink="jobs-applied" (click)="showNavBarMobile = false">
       <span>
         <img  src="../../../assets/icons/icon-job.png" alt="icone de maleta" />
-        <span>Minhas vagas</span>
+        <span routerLinkActive="active">Vagas aplicadas</span>
+      </span>
+    </button>
+
+    <button routerLink="edit-profile" (click)="showNavBarMobile = false">
+      <span>
+        <img  src="../../../assets/icons/icon-profile.png" alt="icone de maleta" />
+        <span routerLinkActive="active">Editar perfil</span>
       </span>
     </button>
   </nav>

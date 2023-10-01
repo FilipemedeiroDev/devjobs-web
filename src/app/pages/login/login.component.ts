@@ -42,9 +42,7 @@ export class LoginComponent implements OnInit{
       this.response = data
       localStorage.setItem("token", this.response.access_token);
       this._toastService.success('Login realizado com sucesso!');
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['dashboard/jobs-applied']);
     });
-
-
   }
 }

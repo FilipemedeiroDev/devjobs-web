@@ -129,6 +129,10 @@
   z-index: 9999999999;
 }
 
+.active {
+  font-weight: 500;
+}
+
 img {
   width: 34px;
   cursor: pointer;

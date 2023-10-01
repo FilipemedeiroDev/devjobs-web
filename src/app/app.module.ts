@@ -15,6 +15,9 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthInterceptor } from './shared/interceptors/auth-interceptor';
 import { AngularToastifyModule, ToastService } from 'angular-toastify';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { JobsAppliedComponent } from './pages/dashboard/jobs-applied/jobs-applied.component';
+import { EditProfileComponent } from './pages/dashboard/edit-profile/edit-profile.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +30,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     JobDetailComponent,
     DashboardComponent,
     NavbarComponent,
+    JobsAppliedComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,

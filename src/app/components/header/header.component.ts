@@ -17,8 +17,14 @@ export class HeaderComponent implements OnInit{
 
       if (event instanceof NavigationEnd) {
        const currentUrl = this.router.url;
-       this.showSignIn = currentUrl !== '/dashboard' && currentUrl !== '/login' && currentUrl !== '/register';
-       this.showLogout = currentUrl === '/dashboard';
+       this.showSignIn = currentUrl !== '/dashboard'
+       && currentUrl !== '/login'
+       && currentUrl !== '/register'
+       && currentUrl !== '/dashboard/jobs-applied'
+       && currentUrl !== '/dashboard/edit-profile';
+       this.showLogout = currentUrl === '/dashboard'
+       || currentUrl === '/dashboard/jobs-applied'
+       || currentUrl === '/dashboard/edit-profile';
       }
     });
   }
