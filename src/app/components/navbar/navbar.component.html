@@ -2,21 +2,21 @@
   <nav>
     <button routerLink="/">
       <span>
-        <img src="../../../assets/icons/icon-home.png" alt="icone casa" />
+        <img src="../../../assets/icons/icon-home.jpg" alt="icone casa" />
         <span>Painel de vagas</span>
       </span>
     </button>
 
     <button routerLink="jobs-applied" (click)="showNavBarMobile = false">
       <span>
-        <img  src="../../../assets/icons/icon-job.png" alt="icone de maleta" />
+        <img  src="../../../assets/icons/icon-job.jpg" alt="icone de maleta" />
         <span routerLinkActive="active">Vagas aplicadas</span>
       </span>
     </button>
 
     <button routerLink="edit-profile" (click)="showNavBarMobile = false">
       <span>
-        <img  src="../../../assets/icons/icon-profile.png" alt="icone de maleta" />
+        <img  src="../../../assets/icons/icon-profile.jpg" alt="icone de maleta" />
         <span routerLinkActive="active">Editar perfil</span>
       </span>
     </button>
@@ -25,8 +25,16 @@
 
 </aside>
 <img
+*ngIf="!showNavBarMobile"
   (click)="showNavMobile()"
   class="menu"
-  src="{{ showNavBarMobile ? '../../../../../assets/icons/icon-close.png' : '../../../../../assets/icons/icon-menu.png'}}"
+  src="../../../../../assets/icons/icon-menu.jpg"
+  alt="icones menu mobile" 
+/>
+<img
+  *ngIf="showNavBarMobile"
+  (click)="showNavMobile()"
+  class="menu"
+  src="../../../../../assets/icons/icon-close.jpg"
   alt="icones menu mobile"
 />

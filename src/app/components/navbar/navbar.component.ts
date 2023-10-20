@@ -9,7 +9,8 @@ export class NavbarComponent {
 
   showNavBarMobile: boolean = false;
 
-
+  constructor () {}
+  
   showNavMobile() {
     this.showNavBarMobile = !this.showNavBarMobile;
   }

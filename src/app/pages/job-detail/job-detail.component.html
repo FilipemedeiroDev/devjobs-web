@@ -5,7 +5,7 @@
         <button routerLink="/" class="back-button">Voltar</button>
         <div *ngIf="company" class="header">
             <div  class="content-company">
-                <img  class="logo-company" src="{{company.photo_url === '' ? 'assets/icons/icon-company.png' : company.photo_url}}" alt="">
+                <img  class="logo-company" src="{{company.photo_url === '' ? 'assets/icons/icon-company.jpg' : company.photo_url}}" alt="">
                 <div class="info-company">
                     <h3>{{ company.short_name }}</h3>
                     <small>{{ company.state }}</small>
